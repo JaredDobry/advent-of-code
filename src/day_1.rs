@@ -4,11 +4,14 @@ pub fn main(file: std::path::PathBuf) -> (i32, i32) {
     let mut calories = Vec::new();
     let mut current_elf = 0;
     for line in lines {
-        if line.len() == 0 { current_elf += 1; }
-        else { 
-            if calories.len() <= current_elf { calories.push(0); }
+        if line.len() == 0 {
+            current_elf += 1;
+        } else {
+            if calories.len() <= current_elf {
+                calories.push(0);
+            }
             calories[current_elf] += line.parse::<i32>().unwrap();
-         }
+        }
     }
     calories.sort();
     calories.reverse();
@@ -21,7 +24,6 @@ pub fn main(file: std::path::PathBuf) -> (i32, i32) {
 
 #[test]
 fn check_answer_valid() {
-    println!("{}", env!("CARGO_MANIFEST_DIR"));
     let mut test_file = std::path::PathBuf::from(env!("CARGO_MANIFEST_DIR"));
     test_file.push("resources/test/day_1.txt");
     assert_eq!(main(test_file), (24000, 45000));

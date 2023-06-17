@@ -1,4 +1,5 @@
 mod day_1;
+mod day_2;
 
 struct Cli {
     day: i8,
@@ -14,5 +15,8 @@ fn main() {
     };
     if args.day == 1 {
         day_1::main(args.file);
+    }
+    else if args.day == 2 {
+        day_2::main(args.file);
     }
 }
