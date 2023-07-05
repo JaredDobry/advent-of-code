@@ -40,7 +40,7 @@ pub fn main(file: std::path::PathBuf) -> (i32, i32) {
         }
     }
 
-    println!("\nTotal signal strength: {sum}");
+    println!("\nnt Total signal strength: {sum}");
 
     return (sum, 0);
 }
