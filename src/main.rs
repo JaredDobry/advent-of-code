@@ -1,6 +1,7 @@
 mod day_1;
 mod day_10;
 mod day_11;
+mod day_12;
 mod day_2;
 mod day_3;
 mod day_4;
@@ -44,5 +45,7 @@ fn main() {
         day_10::main(args.file);
     } else if args.day == 11 {
         day_11::main(args.file);
+    } else if args.day == 12 {
+        day_12::main(args.file);
     }
 }
